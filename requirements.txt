@@ -1,6 +1,5 @@
 absl-py==1.0.0
 alabaster==0.7.12
-anaconda-client==1.7.2
 anaconda-project==0.8.3
 aniso8601==9.0.1
 argh==0.26.2
