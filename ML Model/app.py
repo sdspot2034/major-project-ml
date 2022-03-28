@@ -13,10 +13,6 @@ app = Flask(__name__)
 
 warnings.filterwarnings('ignore')
 
-@app.route("/")
-def home():
-    return render_template("index.html")
-
 @app.route("/",methods=["POST"])
 def predict():
     disease_descr = None
