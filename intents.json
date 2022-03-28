@@ -1,0 +1,40 @@
+{
+    "intents": [
+        {
+            "tag": "greeting",
+            "patterns": ["Hi there","Is anyone there?","Hello", "Hi"],
+            "responses": ["Hello there!","Hi, how can I help you?","Hi!","Hello!"]
+        },
+
+        {
+            "tag": "options",
+            "patterns": ["How can you help me?","What you can do?","I need help", "What to enter?", "I want your help", "I am not feeling well"],
+            "responses": ["I can help you get an initial diagnosis of for health issues based on your symptoms. Please enter your symptoms to continue"]
+        }, 
+
+        {
+            "tag": "greetings_bye",
+            "patterns": ["Thanks for your help", "Bye", "Goodbye", "Thanks", "Thank you", "okay","ok"],
+            "responses": ["No problem! It was a pleasure helping you", "Bye-bye! Hope I able to help you :)", "Goodbye! Hope you to see you again!", "No problem :) I hope I was able to solve your problem!"]
+        },
+
+        {
+            "tag": "information",
+            "patterns": ["Who are you", "Are you a doctor", "Do you have a degree", "Can you tell me about you", "How do you know"],
+            "responses": ["I am Aimee! Your personal healthcare companion!", "I am not a doctor but an artificial intelligent assistant who can streamline your healthcare journey. I did not take the Hippocratic Oath, but it's my duty :D ", "While I do not have a degree, I have been trained using a machine learning model using a database that contains information about many diseases. ", "Hi, I am Aimee! Your personal healthcare companion! Please input your symptoms to know you potential ailments.", "I have trained for hours, learning about many diseases and their symptoms. Since my prediction might not always be perfect, I can help you to find a real doctor who can examine you. Remember, it's always a good idea to take a second opinion :)"]
+        },
+
+        {
+
+            "tag": "general",
+            "patterns": ["I am ill"," I am in pain", "I don't feel good", "I am sick", "I feel low ", "I want to get better", "I feel sick, please help"],
+            "responses": ["Sorry to hear that :( Please enter your symptoms so that I can help you further."]
+        },
+
+        {
+            "tag": "error",
+            "patterns": [],
+            "responses": ["Sorry, I don't understand. Please re-enter your query"]
+        }
+    ]
+}
