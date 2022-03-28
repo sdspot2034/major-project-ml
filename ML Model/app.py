@@ -1,9 +1,8 @@
 from contextlib import nullcontext
 from distutils.log import debug
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
 import pickle
 import warnings
-import json
 import numpy as np
 import pandas as pd
 from processor import pipeline
@@ -53,8 +52,11 @@ def predict():
 
     output = {"disease":output_text,"disease_descr":disease_descr,"disease_prec":disease_prec}
     
-    return render_template("index.html",output=output)
+    return jsonify(output)
 
+@app.route("/test")
+def test():
+    return "API WORKS"
 
 if __name__ == "__main__":
     app.run(debug=True)
