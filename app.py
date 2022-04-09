@@ -1,17 +1,33 @@
 from contextlib import nullcontext
-from distutils.log import debug
 from flask import Flask, render_template, request, jsonify
 import pickle
 import warnings
 import numpy as np
 import pandas as pd
 from processor import pipeline
+from flask_cors import CORS
 
 deja = list()
 
 app = Flask(__name__)
 
+'''
+cors = CORS(app)
+
+@app.after_request
+def after_request(response):
+  response.headers.add('Access-Control-Allow-Origin', '*')
+  response.headers.add("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
+  response.headers.add('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS')
+  response.headers.add('Access-Control-Allow-Credentials', 'true')
+  return response
+'''
+
 warnings.filterwarnings('ignore')
+
+@app.route("/")
+def home():
+    return(render_template("index.html"))
 
 @app.route("/",methods=["POST"])
 def predict():
@@ -48,11 +64,8 @@ def predict():
 
     output = {"disease":output_text,"disease_descr":disease_descr,"disease_prec":disease_prec}
     
-    return jsonify(output)
-
-@app.route("/test")
-def test():
-    return "API WORKS"
+    #return jsonify(output)
+    return render_template("index.html",output=output)
 
 if __name__ == "__main__":
     app.run(debug=True)
