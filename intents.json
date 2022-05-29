@@ -15,7 +15,7 @@
         {
             "tag": "greetings_bye",
             "patterns": ["Thanks for your help", "Bye", "Goodbye", "Thanks", "Thank you", "okay","ok"],
-            "responses": ["No problem! It was a pleasure helping you", "Bye-bye! Hope I able to help you :)", "Goodbye! Hope you to see you again!", "No problem :) I hope I was able to solve your problem!"]
+            "responses": ["No problem! It was a pleasure helping you", "Bye-bye! Hope I was able to help you :)", "Goodbye! Hope you to see you again!", "No problem :) I hope I was able to solve your problem!"]
         },
 
         {

@@ -13,6 +13,7 @@ import tensorflow as tf
 import random
 
 # Load components
+spacy.cli.download("en_core_web_md")
 nlp = spacy.load("en_core_web_md")
 df = pd.read_csv("Database/Symptom-severity.csv")
 df['Symptom'] = df['Symptom'].str.replace(' ','')
